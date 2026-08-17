@@ -1,4 +1,3 @@
-
 :root {
     --gold: #c9a64e;
     --gold2: #d8b45b;
@@ -946,7 +945,9 @@ footer {
 
 @media (max-width: 768px) {
 
-    /* Cabeçalho */
+    /* =====================================
+       CABEÇALHO
+       ===================================== */
 
     .site-header {
         position: absolute;
@@ -985,8 +986,6 @@ footer {
 
         border-width: 2px;
 
-        margin-right: 0;
-
         display: flex;
 
         align-items: center;
@@ -1006,15 +1005,19 @@ footer {
         margin-top: 4px;
     }
 
-    /* Botão menu */
+    /* =====================================
+       BOTÃO MENU
+       ===================================== */
 
     .menu-toggle {
         display: flex !important;
 
         align-items: center;
+
         justify-content: center;
 
         width: 42px;
+
         height: 42px;
 
         margin-left: auto;
@@ -1034,7 +1037,9 @@ footer {
         z-index: 1003;
     }
 
-    /* Menu aberto */
+    /* =====================================
+       MENU ABERTO
+       ===================================== */
 
     .nav {
         display: none;
@@ -1044,6 +1049,7 @@ footer {
         top: 70px;
 
         left: 15px;
+
         right: 15px;
 
         flex-direction: column;
@@ -1079,7 +1085,9 @@ footer {
         display: none;
     }
 
-    /* Instagram e WhatsApp */
+    /* =====================================
+       REDES SOCIAIS
+       ===================================== */
 
     .header-social {
         display: flex !important;
@@ -1089,6 +1097,7 @@ footer {
         gap: 8px;
 
         margin-left: 10px;
+
         margin-right: 8px;
 
         z-index: 1002;
@@ -1096,6 +1105,7 @@ footer {
 
     .header-social a {
         width: 38px;
+
         height: 38px;
 
         min-width: 38px;
@@ -1103,6 +1113,7 @@ footer {
         display: flex !important;
 
         align-items: center;
+
         justify-content: center;
 
         border: 1px solid rgba(255,255,255,.65);
@@ -1121,45 +1132,61 @@ footer {
        ===================================== */
 
     .hero {
-        height: 100vh;
 
-        min-height: 700px;
+        /*
+         * CAPA MAIS BAIXA
+         */
+        height: 78vh;
+
+        /*
+         * Evita a capa ficar enorme
+         */
+        min-height: 600px;
+
+        /*
+         * IMPORTANTE:
+         * A imagem ocupa a altura da capa,
+         * permitindo aparecer mais da largura.
+         */
+        background-size: auto 100%;
+
+        /*
+         * Centraliza a imagem.
+         */
+        background-position: center center;
+
+        background-repeat: no-repeat;
 
         display: flex;
 
         align-items: center;
 
         position: relative;
-
-        /*
-         * A imagem fica inteira na altura da tela.
-         * O posicionamento foi ajustado para mostrar
-         * o NayHouse e também o corretor.
-         */
-        background-size: auto 100%;
-
-        background-position: 62% center;
-
-        background-repeat: no-repeat;
     }
 
     .hero-overlay {
         background:
             linear-gradient(
                 90deg,
-                rgba(0,0,0,.58) 0%,
-                rgba(0,0,0,.28) 55%,
-                rgba(0,0,0,.45) 100%
+                rgba(0,0,0,.45) 0%,
+                rgba(0,0,0,.20) 50%,
+                rgba(0,0,0,.42) 100%
             );
     }
 
+    /* =====================================
+       TEXTO DA CAPA
+       ===================================== */
+
     .hero-content {
+
         position: absolute;
 
         left: 0;
+
         right: 0;
 
-        bottom: 70px;
+        bottom: 38px;
 
         width: 100%;
 
@@ -1169,18 +1196,24 @@ footer {
     }
 
     .hero-text {
+
         max-width: 520px;
 
         color: #fff;
 
-        font-size: 22px;
+        font-size: 21px;
 
         line-height: 1.35;
 
-        margin-bottom: 24px;
+        margin-bottom: 20px;
     }
 
+    /* =====================================
+       BOTÕES DA CAPA
+       ===================================== */
+
     .hero-buttons {
+
         display: flex;
 
         gap: 12px;
@@ -1189,24 +1222,29 @@ footer {
     }
 
     .hero-buttons .btn {
+
         flex: 1;
 
-        min-height: 54px;
+        min-height: 52px;
 
         padding: 12px 8px;
 
         font-size: 14px;
     }
 
-    /* WhatsApp */
+    /* =====================================
+       WHATSAPP
+       ===================================== */
 
     .whatsapp-float {
-        right: 22px;
 
-        bottom: 20px;
+        right: 20px;
 
-        width: 60px;
-        height: 60px;
+        bottom: 18px;
+
+        width: 58px;
+
+        height: 58px;
 
         padding: 0;
 
@@ -1222,10 +1260,12 @@ footer {
     }
 
     .whatsapp-float b {
-        font-size: 27px;
+        font-size: 26px;
     }
 
-    /* Seções */
+    /* =====================================
+       SEÇÕES
+       ===================================== */
 
     .section {
         padding: 65px 28px;
@@ -1245,6 +1285,7 @@ footer {
 
     .card {
         flex: 0 0 100%;
+
         min-width: 100%;
     }
 
@@ -1253,7 +1294,9 @@ footer {
     }
 
     .carousel-btn {
+
         width: 52px;
+
         height: 52px;
 
         font-size: 36px;
@@ -1267,7 +1310,9 @@ footer {
         right: 8px;
     }
 
-    /* História */
+    /* =====================================
+       HISTÓRIA
+       ===================================== */
 
     .story {
         grid-template-columns: 1fr;
@@ -1285,9 +1330,12 @@ footer {
         min-height: 350px;
     }
 
-    /* Páginas */
+    /* =====================================
+       PÁGINAS
+       ===================================== */
 
     .page-hero {
+
         min-height: 300px;
 
         padding: 125px 28px 50px;
@@ -1314,7 +1362,9 @@ footer {
         font-size: 38px;
     }
 
-    /* Detalhes */
+    /* =====================================
+       DETALHES
+       ===================================== */
 
     .detail-wrap {
         padding: 28px 20px 60px;
@@ -1336,7 +1386,9 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
 
-    /* Rodapé */
+    /* =====================================
+       RODAPÉ
+       ===================================== */
 
     .footer-grid {
         grid-template-columns: 1fr;
@@ -1361,6 +1413,7 @@ footer {
 
     .brand-mark {
         width: 38px;
+
         height: 38px;
 
         font-size: 23px;
@@ -1368,18 +1421,23 @@ footer {
 
     .brand small {
         font-size: 6px;
+
         letter-spacing: 2px;
     }
 
     .header-social {
+
         gap: 5px;
 
         margin-left: 6px;
+
         margin-right: 5px;
     }
 
     .header-social a {
+
         width: 34px;
+
         height: 34px;
 
         min-width: 34px;
@@ -1388,41 +1446,66 @@ footer {
     }
 
     .menu-toggle {
+
         width: 36px;
+
         height: 36px;
 
         font-size: 19px;
     }
 
-    /*
-     * No celular pequeno, deslocamos um pouco
-     * a foto para a direita para mostrar melhor
-     * o corretor sem perder completamente
-     * o logo NayHouse da imagem.
-     */
+    /* =====================================
+       CAPA PEQUENA
+       ===================================== */
+
     .hero {
-        height: 100vh;
 
-        min-height: 680px;
+        /*
+         * MAIS BAIXA
+         */
+        height: 76vh;
 
+        min-height: 570px;
+
+        /*
+         * MAIS LARGA VISUALMENTE
+         */
         background-size: auto 100%;
 
-        background-position: 64% center;
+        /*
+         * FOTO CENTRALIZADA
+         */
+        background-position: center center;
+
+        background-repeat: no-repeat;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(0,0,0,.45) 0%,
+                rgba(0,0,0,.18) 50%,
+                rgba(0,0,0,.40) 100%
+            );
     }
 
     .hero-content {
-        bottom: 68px;
+
+        bottom: 30px;
 
         padding-left: 20px;
+
         padding-right: 20px;
     }
 
     .hero-text {
-        font-size: 20px;
+
+        font-size: 19px;
 
         line-height: 1.35;
 
-        margin-bottom: 22px;
+        margin-bottom: 19px;
     }
 
     .hero-buttons {
@@ -1430,15 +1513,37 @@ footer {
     }
 
     .hero-buttons .btn {
-        min-height: 52px;
+
+        min-height: 50px;
 
         font-size: 13px;
 
         padding: 10px 6px;
     }
 
+    /* =====================================
+       WHATSAPP PEQUENO
+       ===================================== */
+
+    .whatsapp-float {
+
+        right: 18px;
+
+        bottom: 16px;
+
+        width: 56px;
+
+        height: 56px;
+    }
+
+    /* =====================================
+       SEÇÕES
+       ===================================== */
+
     .section {
+
         padding-left: 24px;
+
         padding-right: 24px;
     }
 
@@ -1446,8 +1551,14 @@ footer {
         font-size: 38px;
     }
 
+    /* =====================================
+       PÁGINAS
+       ===================================== */
+
     .page-hero {
+
         padding-left: 24px;
+
         padding-right: 24px;
     }
 
@@ -1455,8 +1566,14 @@ footer {
         font-size: 36px;
     }
 
+    /* =====================================
+       DETALHES
+       ===================================== */
+
     .detail-wrap {
+
         padding-left: 16px;
+
         padding-right: 16px;
     }
 
