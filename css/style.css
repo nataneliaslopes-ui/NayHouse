@@ -2,3 +2,184 @@
 @media(max-width:1000px){.nav{gap:18px}.header-social{display:none}.card{flex-basis:calc((100% - 24px)/2)}.property-grid{grid-template-columns:repeat(2,1fr)}.detail-grid{grid-template-columns:1fr}.detail-gallery{min-height:520px}.footer-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){.site-header{padding:18px 28px}.brand{font-size:30px;gap:10px}.brand-mark{width:48px;height:48px;font-size:26px;border-width:2px}.brand small{font-size:9px;letter-spacing:3px}.menu-toggle{display:block}.nav{position:absolute;top:100%;left:20px;right:20px;display:none;flex-direction:column;gap:0;margin:0;padding:10px;background:#0f0f0ff7;border-radius:12px}.nav.open{display:flex}.nav a{padding:15px}.nav a.active:after{display:none}.hero{height:700px;min-height:700px;background-size:auto 100%;background-position:72% center}.hero-content{position:absolute;bottom:70px;padding:0 28px}.hero-text{font-size:21px}.hero-buttons{gap:10px}.hero-buttons .btn{flex:1;padding:12px 7px;font-size:14px}.whatsapp-float{right:24px;bottom:22px;width:62px;height:62px;padding:0;border-radius:50%;justify-content:center}.whatsapp-float span{display:none}.section{padding:65px 28px}.section-head{align-items:flex-start}.section h2{font-size:43px}.carousel-track{gap:18px}.card{flex:0 0 100%;min-width:100%}.card-media{height:310px}.carousel-btn{width:52px;height:52px;font-size:36px}.carousel-btn.prev{left:8px}.carousel-btn.next{right:8px}.story{grid-template-columns:1fr}.story-copy{padding:70px 28px}.story-copy h2{font-size:43px}.story-image{min-height:350px}.page-hero{min-height:300px;padding:125px 28px 50px}.page-hero h1{font-size:40px}.property-grid,.contact-grid{grid-template-columns:1fr}.contact-grid{padding:55px 28px}.story-wide{padding:60px 28px}.story-wide h2{font-size:38px}.detail-wrap{padding:28px 20px 60px}.detail-gallery{min-height:330px}.detail-info h1{font-size:35px}.detail-price{font-size:23px}.detail-features{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr;gap:30px}}
 @media(max-width:480px){.site-header{padding-left:24px;padding-right:24px}.hero-content{padding:0 24px}.hero-text{font-size:20px}.section{padding-left:24px;padding-right:24px}.section h2{font-size:38px}.page-hero{padding-left:24px;padding-right:24px}.page-hero h1{font-size:36px}.detail-wrap{padding-left:16px;padding-right:16px}.detail-gallery{min-height:280px}.detail-info h1{font-size:30px}}
+/* =========================
+   CORREÇÃO DO MENU NO CELULAR
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .site-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 12px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+        box-sizing: border-box;
+    }
+
+    /* Logo */
+    .brand {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        z-index: 1002;
+    }
+
+    .brand-mark {
+        width: 42px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 8px;
+    }
+
+    .brand small {
+        display: block;
+        font-size: 7px;
+        letter-spacing: 2px;
+    }
+
+    /* Botão do menu */
+    .menu-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border: 1px solid rgba(255,255,255,.6);
+        border-radius: 8px;
+        background: rgba(0,0,0,.25);
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+        z-index: 1003;
+    }
+
+    /* Menu */
+    .nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 15px;
+        right: 15px;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px;
+        background: rgba(20,20,20,.97);
+        border-radius: 12px;
+        z-index: 1001;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .nav a {
+        display: block;
+        padding: 13px 10px;
+        text-align: center;
+    }
+
+    /* Instagram e WhatsApp */
+    .header-social {
+        display: flex !important;
+        align-items: center;
+        gap: 8px;
+        margin-left: auto;
+        margin-right: 8px;
+        z-index: 1002;
+    }
+
+    .header-social a {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255,255,255,.65);
+        border-radius: 50%;
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        background: rgba(0,0,0,.20);
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 100vh;
+        height: 100vh;
+    }
+
+    .hero-content {
+        padding: 0 20px;
+        padding-top: 100px;
+    }
+
+    .hero-text {
+        font-size: 26px;
+        line-height: 1.25;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero-buttons .btn {
+        min-width: 130px;
+    }
+}
+
+
+/* CELULARES PEQUENOS */
+@media (max-width: 480px) {
+
+    .site-header {
+        padding: 10px 12px;
+    }
+
+    .brand-mark {
+        width: 38px;
+        height: 38px;
+    }
+
+    .brand {
+        font-size: 25px;
+    }
+
+    .header-social {
+        gap: 5px;
+        margin-right: 5px;
+    }
+
+    .header-social a {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+        font-size: 16px;
+    }
+
+    .menu-toggle {
+        width: 36px;
+        height: 36px;
+        font-size: 19px;
+    }
+
+    .hero-content {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .hero-text {
+        font-size: 23px;
+    }
+}
